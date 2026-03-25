@@ -14,14 +14,10 @@ async function postLink() {
     const channel = await client.channels.fetch(CHANNEL_ID);
     if (!channel || !channel.isTextBased()) return;
 
-    const oembedRes = await fetch(`https://www.youtube.com/oembed?url=${VIDEO_URL}&format=json`);
-    const oembed = await oembedRes.json();
-
     const embed = new EmbedBuilder()
-      .setTitle(oembed.title)
+      .setTitle("Rick Grimes vs Walter White.  Epic Rap Battles Of History")
       .setURL(VIDEO_URL)
       .setImage(`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`)
-      .setAuthor({ name: oembed.author_name })
       .setColor(0xFF0000);
 
     await channel.send({ embeds: [embed] });
