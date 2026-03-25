@@ -1,6 +1,6 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 
-const CHANNEL_ID = "YOUR_CHANNEL_ID_HERE";
+const CHANNEL_ID = "1482112714376482816";
 const MESSAGE = "https://www.youtube.com/watch?v=krQHQvtIr6w";
 
 const token = process.env.DISCORD_BOT_TOKEN;
